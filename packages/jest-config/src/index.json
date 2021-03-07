@@ -1,0 +1,10 @@
+{
+  "preset": "ts-jest",
+  "collectCoverage": false,
+  "coveragePathIgnorePatterns": ["/node_modules/", "/tests/", "/__fixtures__/"],
+  "globals": {
+    "ts-jest": {
+      "tsconfig": "tsconfig.test.json"
+    }
+  }
+}

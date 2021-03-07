@@ -1,0 +1,44 @@
+{
+  "name": "@radicalcondor/tsconfig",
+  "description": "TypeScript config for Cube Dev Inc repositories",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "tsconfig.json",
+  "keywords": [
+    "cubedevinc",
+    "tsconfig"
+  ],
+  "author": {
+    "name": "Radical Condor",
+    "url": "https://github.com/radicalcondor"
+  },
+  "homepage": "https://github.com/radicalcondor/config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radicalcondor/config.git",
+    "directory": "packages/tsconfig"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "pretest": "curl https://json.schemastore.org/tsconfig > schema.json",
+    "test": "ajv validate -s schema.json -d tsconfig.json --errors=json",
+    "posttest": "rimraf schema.json",
+    "build": "echo '0'",
+    "lint": "yarn test"
+  },
+  "peerDependencies": {
+    "typescript": ">=4"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@radicalcondor/lint-staged-config": "0.0.0",
+    "@radicalcondor/prettier-config": "0.0.0",
+    "ajv-cli": "^3",
+    "lint-staged": "^10",
+    "prettier": "^2",
+    "rimraf": "^3"
+  }
+}

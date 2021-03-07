@@ -1,0 +1,63 @@
+{
+  "name": "@radicalcondor/eslint-config",
+  "description": "ESLint config for Cube Dev Inc repositories",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.json",
+  "keywords": [
+    "cubedevinc",
+    "prettier",
+    "prettier-config"
+  ],
+  "author": {
+    "name": "Radical Condor",
+    "url": "https://github.com/radicalcondor"
+  },
+  "homepage": "https://github.com/radicalcondor/config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radicalcondor/config.git",
+    "directory": "packages/eslint"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "pretest": "curl https://json.schemastore.org/eslintrc > src/schema.json",
+    "test": "ajv validate -s src/schema.json -d src/index.json --errors=json",
+    "posttest": "rimraf src/schema.json",
+    "build": "echo '0'",
+    "lint": "prettier src/** --write"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": ">=4",
+    "@typescript-eslint/parser": ">=4",
+    "eslint": ">=3",
+    "eslint-config-airbnb-base": ">=14",
+    "eslint-config-prettier": ">=7",
+    "eslint-plugin-import": ">=2",
+    "eslint-plugin-jest": ">=24",
+    "eslint-plugin-prettier": ">=3",
+    "typescript": ">=4"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@radicalcondor/lint-staged-config": "0.0.0",
+    "@radicalcondor/prettier-config": "0.0.0",
+    "@typescript-eslint/eslint-plugin": "^4",
+    "@typescript-eslint/parser": "^4",
+    "ajv-cli": "^3",
+    "eslint": "^7",
+    "eslint-config-airbnb-base": "^14",
+    "eslint-config-prettier": "^7",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jest": "^24",
+    "eslint-plugin-prettier": "^3",
+    "jest": "^26",
+    "lint-staged": "^10",
+    "prettier": "^2",
+    "rimraf": "^3",
+    "typescript": "^4"
+  }
+}
