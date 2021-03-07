@@ -1,7 +1,7 @@
 {
   "name": "@radicalcondor/lintstaged-config",
   "description": "Lint Staged config for Radical Condor repositories",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "src/index.json",
   "keywords": [
@@ -33,9 +33,8 @@
   "peerDependencies": {
     "lint-staged": ">=10"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@radicalcondor/prettier-config": "0.0.0",
+    "@radicalcondor/prettier-config": "^0.0.1",
     "ajv-cli": "^3",
     "lint-staged": "^10",
     "prettier": "^2",

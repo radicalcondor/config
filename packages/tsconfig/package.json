@@ -1,7 +1,7 @@
 {
   "name": "@radicalcondor/tsconfig",
   "description": "TypeScript config for Radical Condor repositories",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "tsconfig.json",
   "keywords": [
@@ -32,10 +32,9 @@
   "peerDependencies": {
     "typescript": ">=4"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@radicalcondor/lintstaged-config": "0.0.0",
-    "@radicalcondor/prettier-config": "0.0.0",
+    "@radicalcondor/lintstaged-config": "^0.0.1",
+    "@radicalcondor/prettier-config": "^0.0.1",
     "ajv-cli": "^3",
     "lint-staged": "^10",
     "prettier": "^2",

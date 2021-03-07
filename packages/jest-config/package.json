@@ -1,7 +1,7 @@
 {
   "name": "@radicalcondor/jest-config",
   "description": "Jest config for Radical Condor repositories",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "src/index.json",
   "keywords": [
@@ -34,10 +34,9 @@
     "jest": ">=26",
     "ts-jest": ">=26"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@radicalcondor/lintstaged-config": "0.0.0",
-    "@radicalcondor/prettier-config": "0.0.0",
+    "@radicalcondor/lintstaged-config": "^0.0.1",
+    "@radicalcondor/prettier-config": "^0.0.1",
     "lint-staged": "^10",
     "prettier": "^2",
     "rimraf": "^3"
