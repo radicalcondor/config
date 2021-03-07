@@ -1,0 +1,47 @@
+{
+  "name": "@radicalcondor/config",
+  "description": "A collection of shareable configs for various tools of the trade",
+  "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Radical Condor",
+    "url": "https://github.com/radicalcondor"
+  },
+  "homepage": "https://github.com/radicalcondor/config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radicalcondor/config.git"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "clean": "lerna run clean",
+    "build": "lerna run build",
+    "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
+    "test": "lerna run test",
+    "test:coverage": "lerna run test",
+    "release": "lerna publish --conventional-commits --create-release=github --yes --no-verify-access"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11",
+    "@commitlint/config-conventional": "^11",
+    "chalk": "^4",
+    "commitizen": "^4",
+    "conventional-commit-types": "^3",
+    "cross-env": "^7",
+    "cz-customizable": "^6",
+    "husky": "4.*",
+    "lerna": "^3",
+    "lodash.map": "^4",
+    "lodash.max": "^4",
+    "lodash.padend": "^4"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}

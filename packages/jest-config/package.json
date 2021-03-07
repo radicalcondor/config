@@ -1,0 +1,48 @@
+{
+  "name": "@radicalcondor/jest-config",
+  "description": "Jest config for Radical Condor repositories",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.json",
+  "keywords": [
+    "cubedevinc",
+    "jest",
+    "jest-config"
+  ],
+  "author": {
+    "name": "Radical Condor",
+    "url": "https://github.com/radicalcondor"
+  },
+  "homepage": "https://github.com/radicalcondor/config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radicalcondor/config.git",
+    "directory": "packages/jest-config"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "pretest": "curl https://raw.githubusercontent.com/barakplasma/schemastore/master/src/schemas/json/jestconfig.json > src/schema.json",
+    "test": "ajv validate -s src/schema.json -d src/index.json --remove-additional=failing --errors=json",
+    "posttest": "rimraf src/schema.json",
+    "build": "echo '0'",
+    "lint": "prettier src/** --write"
+  },
+  "peerDependencies": {
+    "jest": ">=26",
+    "ts-jest": ">=26"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@radicalcondor/lintstaged-config": "0.0.0",
+    "@radicalcondor/prettier-config": "0.0.0",
+    "lint-staged": "^10",
+    "prettier": "^2",
+    "rimraf": "^3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@radicalcondor/lintstaged-config",
+  "description": "Lint Staged config for Radical Condor repositories",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.json",
+  "keywords": [
+    "cubedevinc",
+    "lint-staged",
+    "lint-staged-config"
+  ],
+  "author": {
+    "name": "Radical Condor",
+    "url": "https://github.com/radicalcondor"
+  },
+  "homepage": "https://github.com/radicalcondor/config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radicalcondor/config.git",
+    "directory": "packages/lintstaged-config"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "pretest": "curl https://json.schemastore.org/lintstagedrc.schema > src/schema.json",
+    "test": "ajv validate -s src/schema.json -d src/index.json --errors=json",
+    "posttest": "rimraf src/schema.json",
+    "build": "echo '0'",
+    "lint": "prettier src/** --write"
+  },
+  "peerDependencies": {
+    "lint-staged": ">=10"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@radicalcondor/prettier-config": "0.0.0",
+    "ajv-cli": "^3",
+    "lint-staged": "^10",
+    "prettier": "^2",
+    "rimraf": "^3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

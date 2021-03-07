@@ -1,0 +1,47 @@
+{
+  "name": "@radicalcondor/prettier-config",
+  "description": "Prettier config for Radical Condor repositories",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.json",
+  "keywords": [
+    "cubedevinc",
+    "prettier",
+    "prettier-config"
+  ],
+  "author": {
+    "name": "Radical Condor",
+    "url": "https://github.com/radicalcondor"
+  },
+  "homepage": "https://github.com/radicalcondor/config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radicalcondor/config.git",
+    "directory": "packages/prettier-config"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "pretest": "curl https://json.schemastore.org/prettierrc > src/schema.json",
+    "test": "ajv validate -s src/schema.json -d src/index.json --errors=json",
+    "posttest": "rimraf src/schema.json",
+    "build": "echo '0'",
+    "lint": "prettier src/** --write"
+  },
+  "peerDependencies": {
+    "prettier": ">=1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@radicalcondor/lintstaged-config": "0.0.0",
+    "ajv-cli": "^3",
+    "lint-staged": "^10",
+    "prettier": "^2",
+    "rimraf": "^3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

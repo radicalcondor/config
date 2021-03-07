@@ -1,0 +1,4 @@
+{
+  "*.json": ["prettier --write"],
+  "*.js?(x)": ["prettier --write", "jest --bail --findRelatedTests"]
+}
