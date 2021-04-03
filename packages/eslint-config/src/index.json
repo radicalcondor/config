@@ -12,6 +12,13 @@
   "plugins": ["@typescript-eslint", "import", "jest"],
   "rules": {
     "@typescript-eslint/member-ordering": 2,
+
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+
     "jest/valid-title": ["error", { "ignoreTypeOfDescribeName": true }],
     "import/extensions": 0,
     "import/no-unresolved": 0,
@@ -25,7 +32,6 @@
     "no-param-reassign": 0,
     "no-plusplus": 0,
     "no-prototype-builtins": 0,
-    "no-unused-vars": ["warn"],
     "object-curly-newline": 0,
     "prefer-object-spread": 0,
     "prefer-promise-reject-errors": 0,
