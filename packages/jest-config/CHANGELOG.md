@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.4 (2021-04-03)
+
+
+### Bug Fixes
+
+* **eslint:** use Typescript-specific lint rule overrides ([b1b4945](https://github.com/radicalcondor/config/commit/b1b49459a5bf1bc7740ee0be11b534598bf3e3f9))
+
+
+
+
+
 ## 0.0.3 (2021-04-03)
 
 
