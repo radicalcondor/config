@@ -5,8 +5,7 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended",
     "plugin:jest/style",
-    "plugin:prettier/recommended",
-    "prettier/@typescript-eslint"
+    "plugin:prettier/recommended"
   ],
   "ignorePatterns": ["*.json"],
   "parser": "@typescript-eslint/parser",
