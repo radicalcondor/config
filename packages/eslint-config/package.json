@@ -1,7 +1,7 @@
 {
   "name": "@radicalcondor/eslint-config",
   "description": "ESLint config for Radical Condor repositories",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "license": "MIT",
   "main": "src/index.json",
   "keywords": [
@@ -42,8 +42,8 @@
     "typescript": ">=4"
   },
   "devDependencies": {
-    "@radicalcondor/lintstaged-config": "^0.0.13",
-    "@radicalcondor/prettier-config": "^0.0.13",
+    "@radicalcondor/lintstaged-config": "^0.0.14",
+    "@radicalcondor/prettier-config": "^0.0.14",
     "@typescript-eslint/eslint-plugin": "^4",
     "@typescript-eslint/parser": "^4",
     "ajv-cli": "^3",
