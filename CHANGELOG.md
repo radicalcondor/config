@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2021-05-17)
+
+
+### Features
+
+* **eslint-config:** only allow camelCase and PascalCase file names ([94278f6](https://github.com/radicalcondor/config/commit/94278f6637f55317b8f2d86257befcfa8ceb21d2))
+
+
+
+
+
 ## 0.0.14 (2021-05-16)
 
 **Note:** Version bump only for package @radicalcondor/config
