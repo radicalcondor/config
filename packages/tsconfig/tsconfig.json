@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "lib": ["es2017"],
-    "target": "es2017",
-    "module": "commonjs",
+    "module": "esnext",
+    "lib": ["esnext"],
     "declaration": true,
     "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
     "resolveJsonModule": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "strict": true
   }
 }
