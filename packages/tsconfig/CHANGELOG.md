@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.3 (2021-05-18)
+
+
+### Bug Fixes
+
+* **eslint-config:** use `eslint-config-prettier` correctly ([a8e2990](https://github.com/radicalcondor/config/commit/a8e2990ebe0f023b7f894290650e35081ebdd05f))
+
+
+
+
+
 ## 0.1.2 (2021-05-18)
 
 **Note:** Version bump only for package @radicalcondor/tsconfig
