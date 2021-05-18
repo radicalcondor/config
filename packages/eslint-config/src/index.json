@@ -20,16 +20,6 @@
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ["error"],
 
-    "unicorn/filename-case": [
-      "error",
-      {
-        "cases": {
-          "camelCase": true,
-          "pascalCase": true
-        }
-      }
-    ],
-
     "jest/valid-title": ["error", { "ignoreTypeOfDescribeName": true }],
     "import/extensions": 0,
     "import/no-unresolved": 0,
