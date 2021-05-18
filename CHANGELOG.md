@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.4 (2021-05-18)
+
+
+### Bug Fixes
+
+* **eslint-config:** remove `unicorn/filename-case` ([7eb0d97](https://github.com/radicalcondor/config/commit/7eb0d9736902157deb5df339148b7ff30d68ab0c))
+
+
+
+
+
 ## 0.1.3 (2021-05-18)
 
 
