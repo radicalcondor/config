@@ -24,7 +24,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "precommit": "lint-staged",
+    "precommit": "yarn build && lint-staged",
     "copy:eslint": "cp ../eslint-config/src/index.json src/eslint.json",
     "copy:lint-staged": "cp ../lintstaged-config/src/index.json src/lint-staged.json",
     "copy:prettier": "cp ../prettier-config/src/index.json src/prettier.json",
