@@ -36,7 +36,7 @@
     "@radicalcondor/lintstaged-config": "^0.1.12",
     "@radicalcondor/prettier-config": "^0.1.12",
     "ajv-cli": "^3",
-    "lint-staged": "^10",
+    "lint-staged": "^11",
     "prettier": "^2",
     "rimraf": "^3"
   },
