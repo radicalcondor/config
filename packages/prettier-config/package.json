@@ -24,9 +24,9 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "pretest": "curl https://json.schemastore.org/prettierrc > src/schema.json",
+    "pretest": "curl https://json.schemastore.org/prettierrc > src/schema.json && ajv migrate -s src/schema.json",
     "test": "ajv validate -s src/schema.json -d src/index.json --errors=json",
-    "posttest": "rimraf src/schema.json",
+    "posttest": "rimraf src/schema.json src/schema.json.bak",
     "build": "echo '0'",
     "lint": "prettier src/** --write"
   },

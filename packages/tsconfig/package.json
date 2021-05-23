@@ -23,9 +23,9 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "pretest": "curl https://json.schemastore.org/tsconfig > schema.json",
-    "test": "ajv validate -s schema.json -d tsconfig.json --errors=json",
-    "posttest": "rimraf schema.json",
+    "pretest": "curl https://json.schemastore.org/tsconfig > schema.json && ajv migrate -s schema.json",
+    "test": "ajv validate -s schema.json -d tsconfig.json --remove-additional=failing --errors=json --strict=false",
+    "posttest": "rimraf schema.json schema.json.bak",
     "build": "echo '0'",
     "lint": "yarn test"
   },

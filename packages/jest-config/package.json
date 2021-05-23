@@ -24,9 +24,9 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "pretest": "curl https://raw.githubusercontent.com/barakplasma/schemastore/master/src/schemas/json/jestconfig.json > src/schema.json",
-    "test": "ajv validate -s src/schema.json -d src/index.json --remove-additional=failing --errors=json",
-    "posttest": "rimraf src/schema.json",
+    "pretest": "curl https://raw.githubusercontent.com/barakplasma/schemastore/master/src/schemas/json/jestconfig.json > src/schema.json && ajv migrate -s src/schema.json",
+    "test": "ajv validate -s src/schema.json -d src/index.json --remove-additional=failing --errors=json -c ajv-formats",
+    "posttest": "rimraf src/schema.json src/schema.json.bak",
     "build": "echo '0'",
     "lint": "prettier src/** --write"
   },
@@ -37,6 +37,8 @@
   "devDependencies": {
     "@radicalcondor/lintstaged-config": "^0.3.0",
     "@radicalcondor/prettier-config": "^0.3.0",
+    "ajv-cli": "^5",
+    "ajv-formats": "^2",
     "lint-staged": "^11",
     "prettier": "^2",
     "rimraf": "^3"
