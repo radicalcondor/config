@@ -35,8 +35,7 @@
     "ts-jest": ">=26"
   },
   "devDependencies": {
-    "@radicalcondor/lintstaged-config": "^0.3.1",
-    "@radicalcondor/prettier-config": "^0.3.1",
+    "@radicalcondor/internal": "^0.3.0",
     "ajv-cli": "^5",
     "ajv-formats": "^2",
     "lint-staged": "^11",

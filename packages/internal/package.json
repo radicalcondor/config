@@ -1,9 +1,10 @@
 {
-  "name": "@radicalcondor/eslint-config",
-  "description": "ESLint config for Radical Condor repositories",
-  "version": "0.3.1",
+  "name": "@radicalcondor/internal",
+  "description": "Internal package for Radical Condor Config repositories",
+  "version": "0.3.0",
   "license": "MIT",
-  "main": "src/index.json",
+  "private": true,
+  "main": "src/index.js",
   "keywords": [
     "radicalcondor",
     "prettier",
@@ -17,21 +18,20 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/radicalcondor/config.git",
-    "directory": "packages/eslint-config"
+    "directory": "packages/internal"
   },
   "engines": {
     "node": ">=10"
   },
   "scripts": {
     "precommit": "lint-staged",
-    "pretest": "curl https://json.schemastore.org/eslintrc > src/schema.json && ajv migrate -s src/schema.json",
-    "test": "ajv validate -s src/schema.json -d src/index.json --errors=json",
-    "posttest": "rimraf src/schema.json src/schema.json.bak",
-    "build": "echo '0'",
+    "copy:eslint": "cp ../eslint-config/src/index.json src/eslint.json",
+    "copy:lint-staged": "cp ../lintstaged-config/src/index.json src/lint-staged.json",
+    "copy:prettier": "cp ../prettier-config/src/index.json src/prettier.json",
+    "build": "yarn copy:eslint && yarn copy:lint-staged && yarn copy:prettier",
     "lint": "prettier src/** --write"
   },
   "peerDependencies": {
-    "@radicalcondor/internal": "^0.3.0",
     "@typescript-eslint/eslint-plugin": ">=4",
     "@typescript-eslint/parser": ">=4",
     "eslint": ">=3",
@@ -43,8 +43,8 @@
     "typescript": ">=4"
   },
   "devDependencies": {
-    "@radicalcondor/lintstaged-config": "^0.3.1",
-    "@radicalcondor/prettier-config": "^0.3.1",
+    "@radicalcondor/lintstaged-config": "^0.1.4",
+    "@radicalcondor/prettier-config": "^0.1.4",
     "@typescript-eslint/eslint-plugin": "^4",
     "@typescript-eslint/parser": "^4",
     "ajv-cli": "^5",
@@ -55,12 +55,9 @@
     "eslint-plugin-jest": "^24",
     "eslint-plugin-prettier": "^3",
     "jest": "^26",
-    "lint-staged": "^11",
+    "lint-staged": "^10",
     "prettier": "^2",
     "rimraf": "^3",
     "typescript": "^4"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

@@ -1,1 +1,1 @@
-module.exports = require('@radicalcondor/lintstaged-config');
+module.exports = require('@radicalcondor/internal').lintStaged;
