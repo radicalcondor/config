@@ -1,0 +1,47 @@
+{
+  "name": "@radicalcondor/commitlint-config",
+  "description": "CommitLint config for Radical Condor repositories",
+  "version": "0.3.1",
+  "license": "MIT",
+  "main": "src/index.json",
+  "keywords": [
+    "radicalcondor",
+    "commitlint",
+    "commitlint-config"
+  ],
+  "author": {
+    "name": "Radical Condor",
+    "url": "https://github.com/radicalcondor"
+  },
+  "homepage": "https://github.com/radicalcondor/config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radicalcondor/config.git",
+    "directory": "packages/commitlint-config"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "pretest": "curl https://json.schemastore.org/commitlintrc.json > src/schema.json && ajv migrate -s src/schema.json",
+    "test": "ajv validate -s src/schema.json -d src/index.json --errors=json",
+    "posttest": "rimraf src/schema.json src/schema.json.bak",
+    "build": "echo '0'",
+    "lint": "prettier src/** --write"
+  },
+  "peerDependencies": {
+    "jest": ">=26",
+    "ts-jest": ">=26"
+  },
+  "devDependencies": {
+    "@radicalcondor/internal": "^0.3.0",
+    "ajv-cli": "^5",
+    "lint-staged": "^11",
+    "prettier": "^2",
+    "rimraf": "^3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
