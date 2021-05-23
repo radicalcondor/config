@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2021-05-23)
+
+
+### Features
+
+* **tsconfig:** update `tsconfig.json` for modern JavaScript ([5605146](https://github.com/radicalcondor/config/commit/56051467c6ad1a71f3f9b227d0003ff4e8d35d8d))
+
+
+
+
+
 # 0.2.0 (2021-05-23)
 
 
