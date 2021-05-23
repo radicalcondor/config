@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^11",
-    "@commitlint/config-conventional": "^11",
+    "@commitlint/config-conventional": "^12",
     "chalk": "^4",
     "commitizen": "^4",
     "conventional-commit-types": "^3",
