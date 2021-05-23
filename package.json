@@ -26,7 +26,7 @@
     "release": "lerna publish --conventional-commits --create-release=github --yes --no-verify-access"
   },
   "devDependencies": {
-    "@commitlint/cli": "^11",
+    "@commitlint/cli": "^12",
     "@commitlint/config-conventional": "^12",
     "chalk": "^4",
     "commitizen": "^4",
