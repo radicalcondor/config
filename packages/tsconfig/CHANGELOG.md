@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2021-05-23)
+
+
+### Features
+
+* **lintstaged-config:** format Markdown with Prettier ([e19354e](https://github.com/radicalcondor/config/commit/e19354ec90f4e050642f76f011eb733556cb91cc))
+
+
+
+
+
 ## 0.1.14 (2021-05-23)
 
 **Note:** Version bump only for package @radicalcondor/tsconfig
