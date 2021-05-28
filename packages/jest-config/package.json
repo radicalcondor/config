@@ -1,7 +1,7 @@
 {
   "name": "@radicalcondor/jest-config",
   "description": "Jest config for Radical Condor repositories",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "license": "MIT",
   "main": "src/index.json",
   "keywords": [
@@ -35,7 +35,7 @@
     "ts-jest": ">=26"
   },
   "devDependencies": {
-    "@radicalcondor/internal": "^0.3.3",
+    "@radicalcondor/internal": "^0.3.4",
     "ajv-cli": "^5",
     "ajv-formats": "^2",
     "lint-staged": "^11",
