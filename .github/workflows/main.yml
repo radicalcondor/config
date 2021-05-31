@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12'
+          token: ${{ secrets.ORG_GH_RELEASE_TOKEN }}
       - run: yarn install --frozen-lockfile
       - run: yarn lint
 
