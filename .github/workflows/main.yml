@@ -16,7 +16,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12'
-          token: ${{ secrets.ORG_GH_RELEASE_TOKEN }}
       - run: yarn install --frozen-lockfile
       - run: yarn lint
 
@@ -41,6 +40,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ORG_GH_RELEASE_TOKEN }}
 
       - name: Set Git identity
         run: |
