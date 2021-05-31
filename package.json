@@ -33,7 +33,7 @@
     "conventional-commit-types": "^3",
     "cross-env": "^7",
     "cz-customizable": "^6",
-    "husky": "4.*",
+    "husky": "5.*",
     "lerna": "^4",
     "lodash.map": "^4",
     "lodash.max": "^4",
