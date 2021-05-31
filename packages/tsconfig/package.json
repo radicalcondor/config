@@ -1,7 +1,7 @@
 {
   "name": "@radicalcondor/tsconfig",
   "description": "TypeScript config for Radical Condor repositories",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "license": "MIT",
   "main": "tsconfig.json",
   "keywords": [
@@ -33,7 +33,7 @@
     "typescript": ">=4"
   },
   "devDependencies": {
-    "@radicalcondor/internal": "^0.3.7",
+    "@radicalcondor/internal": "^0.3.8",
     "ajv-cli": "^5",
     "lint-staged": "^11",
     "prettier": "^2",
