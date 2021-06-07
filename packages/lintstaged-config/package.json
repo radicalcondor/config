@@ -1,7 +1,7 @@
 {
   "name": "@radicalcondor/lintstaged-config",
   "description": "Lint Staged config for Radical Condor repositories",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "license": "MIT",
   "main": "src/index.json",
   "keywords": [
@@ -34,7 +34,7 @@
     "lint-staged": ">=10"
   },
   "devDependencies": {
-    "@radicalcondor/internal": "^0.4.6",
+    "@radicalcondor/internal": "^0.4.7",
     "ajv-cli": "^5",
     "lint-staged": "^11",
     "prettier": "^2",
