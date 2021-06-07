@@ -1,7 +1,7 @@
 {
   "name": "@radicalcondor/commitlint-config",
   "description": "CommitLint config for Radical Condor repositories",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "license": "MIT",
   "main": "src/index.json",
   "keywords": [
@@ -35,7 +35,7 @@
     "ts-jest": ">=26"
   },
   "devDependencies": {
-    "@radicalcondor/internal": "^0.4.3",
+    "@radicalcondor/internal": "^0.4.4",
     "ajv-cli": "^5",
     "lint-staged": "^11",
     "prettier": "^2",
