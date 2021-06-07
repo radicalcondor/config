@@ -1,7 +1,7 @@
 {
   "name": "@radicalcondor/prettier-config",
   "description": "Prettier config for Radical Condor repositories",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "license": "MIT",
   "main": "src/index.json",
   "keywords": [
@@ -34,7 +34,7 @@
     "prettier": ">=1"
   },
   "devDependencies": {
-    "@radicalcondor/internal": "^0.4.7",
+    "@radicalcondor/internal": "^0.4.8",
     "ajv-cli": "^5",
     "lint-staged": "^11",
     "prettier": "^2",
