@@ -9,26 +9,31 @@
     "jest",
     "jest-config"
   ],
-  "author": {
-    "name": "Radical Condor",
-    "url": "https://github.com/radicalcondor"
-  },
   "homepage": "https://github.com/radicalcondor/config",
   "repository": {
     "type": "git",
     "url": "https://github.com/radicalcondor/config.git",
     "directory": "packages/jest-config"
   },
+  "bugs": {
+    "url": "https://github.com/radicalcondor/config/issues"
+  },
+  "author": {
+    "name": "Radical Condor",
+    "url": "https://github.com/radicalcondor"
+  },
   "engines": {
     "node": ">=10"
   },
   "scripts": {
+    "build": "echo '0'",
+    "lint": "npm-run-all lint:*",
+    "lint:js": "prettier src/** --write",
+    "lint:npm": "npmPkgJsonLint .",
+    "posttest": "rimraf src/schema.json src/schema.json.bak",
     "precommit": "lint-staged",
     "pretest": "curl https://raw.githubusercontent.com/barakplasma/schemastore/master/src/schemas/json/jestconfig.json > src/schema.json && ajv migrate -s src/schema.json",
-    "test": "ajv validate -s src/schema.json -d src/index.json --remove-additional=failing --errors=json -c ajv-formats",
-    "posttest": "rimraf src/schema.json src/schema.json.bak",
-    "build": "echo '0'",
-    "lint": "prettier src/** --write"
+    "test": "ajv validate -s src/schema.json -d src/index.json --remove-additional=failing --errors=json -c ajv-formats"
   },
   "peerDependencies": {
     "jest": ">=26",
@@ -39,6 +44,8 @@
     "ajv-cli": "^5",
     "ajv-formats": "^2",
     "lint-staged": "^11",
+    "npm-package-json-lint": "^5",
+    "npm-run-all": "^4",
     "prettier": "^2",
     "rimraf": "^3"
   },

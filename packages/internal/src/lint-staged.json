@@ -1,4 +1,5 @@
 {
+  "package.json": ["npmPkgJsonLint"],
   "*.md": ["prettier --write"],
   "*.json": ["prettier --write"],
   "*.js?(x)": ["prettier --write", "jest --bail --findRelatedTests"]

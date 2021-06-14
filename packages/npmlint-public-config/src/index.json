@@ -1,0 +1,79 @@
+{
+  "rules": {
+    "require-author": "error",
+    "require-description": "error",
+    "require-engines": "error",
+    "require-license": "error",
+    "require-name": "error",
+    "require-repository": "error",
+    "require-version": "error",
+    "require-bugs": "error",
+    "require-homepage": "error",
+    "require-keywords": "error",
+    "bin-type": "error",
+    "config-type": "error",
+    "description-type": "error",
+    "devDependencies-type": "error",
+    "directories-type": "error",
+    "engines-type": "error",
+    "files-type": "error",
+    "homepage-type": "error",
+    "keywords-type": "error",
+    "license-type": "error",
+    "main-type": "error",
+    "man-type": "error",
+    "name-type": "error",
+    "preferGlobal-type": "error",
+    "private-type": "error",
+    "repository-type": "error",
+    "scripts-type": "error",
+    "version-type": "error",
+
+    "no-repeated-dependencies": "error",
+    "no-duplicate-properties": "error",
+
+    "prefer-alphabetical-scripts": "error",
+    "prefer-scripts": ["error", ["lint", "test"]],
+
+    "prefer-alphabetical-dependencies": "error",
+    "prefer-alphabetical-devDependencies": "error",
+    "prefer-alphabetical-bundledDependencies": "error",
+    "prefer-alphabetical-optionalDependencies": "error",
+    "prefer-alphabetical-peerDependencies": "error",
+
+    "valid-values-author": ["error", ["Radical Condor"]],
+    "valid-values-name-scope": ["error", ["@radicalcondor"]],
+    "valid-values-private": ["error", [false]],
+    "prefer-property-order": [
+      "error",
+      [
+        "name",
+        "description",
+        "version",
+        "license",
+        "private",
+        "main",
+        "keywords",
+        "homepage",
+        "repository",
+        "bugs",
+        "author",
+        "engines",
+        "scripts",
+        "peerDependencies",
+        "dependencies",
+        "devDependencies"
+      ]
+    ],
+
+    "name-format": "error",
+    "description-format": [
+      "error",
+      {
+        "requireCapitalFirstLetter": true,
+        "forbidEndingPeriod": true
+      }
+    ],
+    "version-format": "error"
+  }
+}

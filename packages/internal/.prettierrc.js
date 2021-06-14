@@ -1,1 +1,1 @@
-module.exports = require('@radicalcondor/prettier-config');
+module.exports = require('./src/prettier.json');

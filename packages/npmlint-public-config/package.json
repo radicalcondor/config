@@ -1,19 +1,19 @@
 {
-  "name": "@radicalcondor/commitlint-config",
-  "description": "CommitLint config for Radical Condor repositories",
+  "name": "@radicalcondor/npmlint-public-config",
+  "description": "NPM Package JSON Lint config for Radical Condor public repositories",
   "version": "0.4.9",
   "license": "MIT",
   "main": "src/index.json",
   "keywords": [
     "radicalcondor",
-    "commitlint",
-    "commitlint-config"
+    "jest",
+    "npmlint-public-config"
   ],
   "homepage": "https://github.com/radicalcondor/config",
   "repository": {
     "type": "git",
     "url": "https://github.com/radicalcondor/config.git",
-    "directory": "packages/commitlint-config"
+    "directory": "packages/npmlint-public-config"
   },
   "bugs": {
     "url": "https://github.com/radicalcondor/config/issues"
@@ -32,16 +32,16 @@
     "lint:npm": "npmPkgJsonLint .",
     "posttest": "rimraf src/schema.json src/schema.json.bak",
     "precommit": "lint-staged",
-    "pretest": "curl https://json.schemastore.org/commitlintrc.json > src/schema.json && ajv migrate -s src/schema.json",
-    "test": "ajv validate -s src/schema.json -d src/index.json --errors=json"
+    "pretest": "curl https://json.schemastore.org/npmpackagejsonlintrc.json > src/schema.json && ajv migrate -s src/schema.json",
+    "test": "ajv validate -s src/schema.json -d src/index.json --strict=false --errors=json"
   },
   "peerDependencies": {
-    "@commitlint/cli": ">=12",
-    "@commitlint/config-conventional": ">=12"
+    "npm-package-json-lint": ">=5"
   },
   "devDependencies": {
     "@radicalcondor/internal": "^0.4.9",
     "ajv-cli": "^5",
+    "ajv-formats": "^2",
     "lint-staged": "^11",
     "npm-package-json-lint": "^5",
     "npm-run-all": "^4",

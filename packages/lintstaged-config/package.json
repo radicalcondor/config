@@ -9,26 +9,31 @@
     "lint-staged",
     "lint-staged-config"
   ],
-  "author": {
-    "name": "Radical Condor",
-    "url": "https://github.com/radicalcondor"
-  },
   "homepage": "https://github.com/radicalcondor/config",
   "repository": {
     "type": "git",
     "url": "https://github.com/radicalcondor/config.git",
     "directory": "packages/lintstaged-config"
   },
+  "bugs": {
+    "url": "https://github.com/radicalcondor/config/issues"
+  },
+  "author": {
+    "name": "Radical Condor",
+    "url": "https://github.com/radicalcondor"
+  },
   "engines": {
     "node": ">=10"
   },
   "scripts": {
+    "build": "echo '0'",
+    "lint": "npm-run-all lint:*",
+    "lint:js": "prettier src/** --write",
+    "lint:npm": "npmPkgJsonLint .",
+    "posttest": "rimraf src/schema.json src/schema.json.bak",
     "precommit": "lint-staged",
     "pretest": "curl https://json.schemastore.org/lintstagedrc.schema > src/schema.json && ajv migrate -s src/schema.json",
-    "test": "ajv validate -s src/schema.json -d src/index.json --errors=json",
-    "posttest": "rimraf src/schema.json src/schema.json.bak",
-    "build": "echo '0'",
-    "lint": "prettier src/** --write"
+    "test": "ajv validate -s src/schema.json -d src/index.json --errors=json"
   },
   "peerDependencies": {
     "lint-staged": ">=10"
@@ -37,6 +42,8 @@
     "@radicalcondor/internal": "^0.4.9",
     "ajv-cli": "^5",
     "lint-staged": "^11",
+    "npm-package-json-lint": "^5",
+    "npm-run-all": "^4",
     "prettier": "^2",
     "rimraf": "^3"
   },

@@ -8,26 +8,31 @@
     "radicalcondor",
     "tsconfig"
   ],
-  "author": {
-    "name": "Radical Condor",
-    "url": "https://github.com/radicalcondor"
-  },
   "homepage": "https://github.com/radicalcondor/config",
   "repository": {
     "type": "git",
     "url": "https://github.com/radicalcondor/config.git",
     "directory": "packages/tsconfig"
   },
+  "bugs": {
+    "url": "https://github.com/radicalcondor/config/issues"
+  },
+  "author": {
+    "name": "Radical Condor",
+    "url": "https://github.com/radicalcondor"
+  },
   "engines": {
     "node": ">=10"
   },
   "scripts": {
+    "build": "echo '0'",
+    "lint": "npm-run-all lint:*",
+    "lint:js": "prettier tsconfig.json --write",
+    "lint:npm": "npmPkgJsonLint .",
+    "posttest": "rimraf schema.json schema.json.bak",
     "precommit": "lint-staged",
     "pretest": "curl https://json.schemastore.org/tsconfig > schema.json && ajv migrate -s schema.json",
-    "test": "ajv validate -s schema.json -d tsconfig.json --remove-additional=failing --errors=json --strict=false",
-    "posttest": "rimraf schema.json schema.json.bak",
-    "build": "echo '0'",
-    "lint": "yarn test"
+    "test": "ajv validate -s schema.json -d tsconfig.json --remove-additional=failing --errors=json --strict=false"
   },
   "peerDependencies": {
     "typescript": ">=4"
@@ -36,6 +41,8 @@
     "@radicalcondor/internal": "^0.4.9",
     "ajv-cli": "^5",
     "lint-staged": "^11",
+    "npm-package-json-lint": "^5",
+    "npm-run-all": "^4",
     "prettier": "^2",
     "rimraf": "^3"
   },
