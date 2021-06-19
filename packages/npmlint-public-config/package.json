@@ -1,7 +1,7 @@
 {
   "name": "@radicalcondor/npmlint-public-config",
   "description": "NPM Package JSON Lint config for Radical Condor public repositories",
-  "version": "0.4.9",
+  "version": "0.5.0",
   "license": "MIT",
   "main": "src/index.json",
   "keywords": [
@@ -39,7 +39,7 @@
     "npm-package-json-lint": ">=5"
   },
   "devDependencies": {
-    "@radicalcondor/internal": "^0.4.9",
+    "@radicalcondor/internal": "^0.5.0",
     "ajv-cli": "^5",
     "ajv-formats": "^2",
     "lint-staged": "^11",

@@ -1,7 +1,7 @@
 {
   "name": "@radicalcondor/internal",
   "description": "Internal package for Radical Condor Config repositories",
-  "version": "0.4.9",
+  "version": "0.5.0",
   "license": "MIT",
   "private": true,
   "main": "src/index.js",
@@ -38,7 +38,6 @@
     "precommit": "yarn build && lint-staged",
     "test": "echo '0'"
   },
-  "peerDependencies": {},
   "devDependencies": {
     "lint-staged": "^10",
     "npm-package-json-lint": "^5",
