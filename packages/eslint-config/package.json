@@ -57,7 +57,7 @@
     "eslint-plugin-import": "^2",
     "eslint-plugin-jest": "^24",
     "eslint-plugin-prettier": "^3",
-    "jest": "^27",
+    "jest": "^28",
     "lint-staged": "^11",
     "npm-package-json-lint": "^5",
     "npm-run-all": "^4",
