@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@radicalcondor/internal": "^0.5.1",
-    "@typescript-eslint/eslint-plugin": "^4",
+    "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^4",
     "ajv-cli": "^5",
     "eslint": "^8",
